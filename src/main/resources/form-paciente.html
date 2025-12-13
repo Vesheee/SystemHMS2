@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Novo Paciente</title>
+</head>
+<body>
+
+<h1>Cadastrar Paciente</h1>
+
+<form th:action="@{/pacientes/salvar}" th:object="${paciente}" method="post">
+
+    Nome:
+    <input type="text" th:field="*{Nome}" />
+    <br>
+
+    CPF:
+    <input type="text" th:field="*{CPF}" />
+    <br>
+
+    Telefone:
+    <input type="text" th:field="*{Telefone}" />
+    <br>
+
+    Endereço:
+    <input type="text" th:field="*{Endereco}" />
+    <br>
+
+    <button type="submit">Salvar</button>
+
+</form>
+
+</body>
+</html>
